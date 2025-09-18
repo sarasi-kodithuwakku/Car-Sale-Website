@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dream Cars</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body id="index-page">
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo"><a href="#home">DREAM CARS</a></h1>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-links">
+        <li><a href="#home" class="active-link">Home</a></li>
+        <li><a href="#vehicles">Vehicles</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">
+        <i class="fas fa-moon"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <!-- Home -->
+    <section id="home" class="page-section active">
+      <div class="hero-banner">
+        <img src="https://s12079.pcdn.co/wp-content/uploads/2015/10/bmw_m3_autumn-wallpaper-1920x1080.jpg" alt="Luxury car showroom banner"/>
+        <div class="hero-overlay">
+          <h2>Find Your Dream Car</h2>
+          <p>Explore our premium selection of new and used vehicles.</p>
+        </div>
+      </div>
+      <div class="content-container">
+        <h3 class="section-title">Featured Vehicles</h3>
+        <div id="featured-products" class="product-grid"></div>
+        <div class="cta-section">
+          <h3>Ready for a Test Drive?</h3>
+          <p>Contact us to schedule an appointment and experience your dream car today.</p>
+          <a href="#contact" class="btn">Schedule Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vehicles -->
+    <section id="vehicles" class="page-section">
+      <div class="content-container">
+        <h3 class="section-title">Explore Our Inventory</h3>
+        <div class="filters-panel">
+          <div class="filter-group">
+            <label for="make-filter">Make</label>
+            <select id="make-filter">
+              <option value="All">All</option>
+              <option value="Toyota">Toyota</option>
+              <option value="BMW">BMW</option>
+              <option value="Honda">Honda</option>
+              <option value="Mercedes-Benz">Mercedes-Benz</option>
+            </select>
+          </div>
+          <div class="filter-group price-filter">
+            <label>Price Range</label>
+            <input type="range" id="price-range" min="0" max="30000000" value="30000000"/>
+            <span id="price-display">LKR 30,000,000</span>
+          </div>
+          <button id="apply-filters" class="btn filter-btn">Apply Filters</button>
+        </div>
+        <div id="product-listings" class="product-grid"></div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="page-section">
+      <div class="content-container">
+        <h3 class="section-title">About Dream Cars</h3>
+        <p>Dream Cars is a premier car dealership in Sri Lanka, dedicated to providing high-quality new and used vehicles at competitive prices. Our mission is to make the car buying process transparent, easy, and enjoyable for our customers.</p>
+        <p>Located at 123 Main Street, Colombo, Sri Lanka, our showroom is open six days a week. Our team of experienced professionals is committed to helping you find your dream car. We stand by our promise of excellent customer service and after-sales support.</p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="page-section">
+      <div class="content-container contact-container">
+        <h3 class="section-title">Contact Us</h3>
+        <div class="contact-flex">
+          <div class="contact-form-container">
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" required/>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required/>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone"/>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject"/>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" required></textarea>
+              </div>
+              <button type="submit" class="btn">Submit</button>
+            </form>
+          </div>
+          <div class="contact-info">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.536465442597!2d79.84893740604156!3d6.926696723615951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2593d026973d3%3A0x30832730d9123ba7!2sCinnamon%20Lakeside%20Bus%20Stop!5e0!3m2!1sen!2slk!4v1758214005376!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            <p><strong><i class="fas fa-map-marker-alt"></i> Address:</strong> 123 Main Street, Colombo, Sri Lanka</p>
+            <p><strong><i class="fas fa-phone"></i> Phone:</strong> +94 77 123 4567</p>
+            <p><strong><i class="fas fa-envelope"></i> Email:</strong> info@dreamcars.lk</p>
+            <p><strong><i class="fas fa-clock"></i> Hours:</strong> Mon-Sat, 9 AM - 6 PM</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 Dream Cars. All Rights Reserved.</p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
