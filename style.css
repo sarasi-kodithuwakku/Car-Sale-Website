@@ -328,6 +328,54 @@ main {
     align-self: flex-end;
 }
 
+/* New Styles for Single Product View */
+.product-details-full {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--card-bg-light);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px var(--shadow-light);
+}
+
+.product-image-container {
+    width: 100%;
+}
+
+.product-image-container img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-info-container h2 {
+    font-size: 2rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.product-info-container p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .product-details-full {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .product-image-container {
+        flex: 1;
+    }
+    .product-info-container {
+        flex: 1;
+        padding-left: 2rem;
+    }
+}
+
 /* Contact Page Styles */
 .contact-container {
     padding-top: 0;

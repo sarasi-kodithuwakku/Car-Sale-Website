@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Dream Cars - Vehicles</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body id="details-page">
+
+    <header>
+        <nav class="navbar">
+            <h1 class="logo"><a href="index.html">DREAM CARS</a></h1>
+            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="vehicle-details.html" class="active-link">Vehicles</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content-container">
+            <section id="all-vehicles-container" class="page-section active">
+                <h3 class="section-title">Explore Our Inventory</h3>
+                <div class="filters-panel">
+                    <div class="filter-group">
+                        <label for="make-filter">Make</label>
+                        <select id="make-filter">
+                            <option value="All">All</option>
+                            <option value="Toyota">Toyota</option>
+                            <option value="BMW">BMW</option>
+                            <option value="Honda">Honda</option>
+                            <option value="Mercedes-Benz">Mercedes-Benz</option>
+                        </select>
+                    </div>
+                    <div class="filter-group price-filter">
+                        <label>Price Range</label>
+                        <input type="range" id="price-range" min="0" max="30000000" value="30000000"/>
+                        <span id="price-display">LKR 30,000,000</span>
+                    </div>
+                    <button id="apply-filters" class="btn filter-btn">Apply Filters</button>
+                </div>
+                <div id="product-listings" class="product-grid"></div>
+            </section>
+
+            <section id="single-product-container" class="page-section">
+                <div id="product-details-container" class="product-details-full">
+                    </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Dream Cars. All Rights Reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
