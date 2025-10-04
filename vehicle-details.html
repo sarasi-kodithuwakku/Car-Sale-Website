@@ -22,7 +22,7 @@
                 <li><a href="index.html#about">About Us</a></li>
                 <li><a href="index.html#contact">Contact Us</a></li>
             </ul>
-            <button id="theme-toggle" class="theme-toggle">
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
                 <i class="fas fa-moon"></i>
             </button>
         </nav>
@@ -30,7 +30,7 @@
 
     <main>
         <div class="content-container">
-            <section id="all-vehicles-container" class="page-section active">
+            <section id="all-vehicles-container" class="page-section">
                 <h3 class="section-title">Explore Our Inventory</h3>
                 <div class="filters-panel">
                     <div class="filter-group">
@@ -48,21 +48,69 @@
                         <input type="range" id="price-range" min="0" max="30000000" value="30000000"/>
                         <span id="price-display">LKR 30,000,000</span>
                     </div>
-                    <button id="apply-filters" class="btn filter-btn">Apply Filters</button>
                 </div>
                 <div id="product-listings" class="product-grid"></div>
             </section>
 
             <section id="single-product-container" class="page-section">
-                <div id="product-details-container" class="product-details-full">
+                <div id="product-details-container" class="product-details-full"></div>
+            </section>
+
+            <section id="test-drive-section" class="page-section">
+                <div class="content-container contact-container">
+                    <h3 class="section-title">Schedule a Test Drive</h3>
+                    <div class="contact-form-container">
+                        <form id="test-drive-form" action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="e0822d42-3ad4-49c5-b797-144a8e8891e2">
+                            <input type="hidden" name="redirect" value="#thank-you-section">
+                            <div class="form-group">
+                                <label for="td-name">Name *</label>
+                                <input type="text" name="name" id="td-name" required placeholder="Your full name" />
+                            </div>
+                            <div class="form-group">
+                                <label for="td-email">Email *</label>
+                                <input type="email" name="email" id="td-email" required placeholder="your.email@example.com" />
+                            </div>
+                            <div class="form-group">
+                                <label for="td-phone">Phone *</label>
+                                <input type="tel" name="phone" id="td-phone" pattern="[0-9]{10}" title="Enter a 10-digit phone number (e.g., 0712345678)" required placeholder="0712345678" />
+                            </div>
+                            <div class="form-group">
+                                <label for="td-area">Area *</label>
+                                <input type="text" name="area" id="td-area" required placeholder="Your location" />
+                            </div>
+                            <div class="form-group">
+                                <label for="td-date">Preferred Date *</label>
+                                <input type="date" name="date" id="td-date" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="td-time">Preferred Time *</label>
+                                <input type="time" name="time" id="td-time" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="td-message">Additional Information</label>
+                                <textarea name="message" id="td-message" placeholder="Any specific requirements or preferences?"></textarea>
+                            </div>
+                            <button type="submit" class="btn">Schedule Test Drive</button>
+                        </form>
+                        <div id="test-drive-message" class="form-message"></div>
                     </div>
+                </div>
+            </section>
+
+            <section id="thank-you-section" class="page-section">
+                <div class="content-container" style="text-align: center; padding-top: 5rem;">
+                    <h3 class="section-title">Thank You!</h3>
+                    <p style="font-size: 1.1rem; margin-bottom: 2rem;">Your request has been submitted successfully. We will contact you shortly to confirm the details.</p>
+                    <a href="vehicle-details.html" class="btn">Back to Vehicles</a>
+                </div>
             </section>
         </div>
     </main>
 
     <footer>
-        <p>© 2024 Dream Cars. All Rights Reserved.</p>
-        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        <p>&copy; 2024 Dream Cars. All Rights Reserved.</p>
+        <p><a href="index.html#privacy">Privacy Policy</a> | <a href="index.html#terms">Terms & Conditions</a></p>
     </footer>
 
     <script src="script.js"></script>

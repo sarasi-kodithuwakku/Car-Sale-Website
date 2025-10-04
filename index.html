@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dream Cars</title>
+  <title>Dream Cars - Find Your Dream Car</title>
+  <meta name="description" content="Dream Cars - Premier car dealership in Sri Lanka offering quality new and used vehicles at competitive prices.">
   <link rel="stylesheet" href="style.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -22,13 +23,14 @@
         <li><a href="#about">About Us</a></li>
         <li><a href="#contact">Contact Us</a></li>
       </ul>
-      <button id="theme-toggle" class="theme-toggle">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
         <i class="fas fa-moon"></i>
       </button>
     </nav>
   </header>
 
   <main>
+    <!-- Home Section -->
     <section id="home" class="page-section active">
       <div class="hero-banner">
         <img src="https://c4.wallpaperflare.com/wallpaper/777/369/220/audi-s5-audi-car-blue-cars-wallpaper-preview.jpg" alt="Luxury car showroom banner"/>
@@ -43,63 +45,170 @@
         <div class="cta-section">
           <h3>Ready for a Test Drive?</h3>
           <p>Contact us to schedule an appointment and experience your dream car today.</p>
-          <a href="#contact" class="btn">Schedule Now</a>
+          <a href="#test-drive-section" class="btn">Schedule Now</a>
         </div>
       </div>
     </section>
 
+    <!-- About Section -->
     <section id="about" class="page-section">
       <div class="content-container">
         <h3 class="section-title">About Dream Cars</h3>
-        <p>Dream Cars is a premier car dealership in Sri Lanka, dedicated to providing high-quality new and used vehicles at competitive prices. Our mission is to make the car buying process transparent, easy, and enjoyable for our customers.</p>
-        <p>Located at 123 Main Street, Colombo, Sri Lanka, our showroom is open six days a week. Our team of experienced professionals is committed to helping you find your dream car. We stand by our promise of excellent customer service and after-sales support.</p>
+        <div style="max-width: 900px; margin: 0 auto;">
+          <p>Dream Cars is a premier car dealership in Sri Lanka, dedicated to providing high-quality new and used vehicles at competitive prices. Our mission is to make the car buying process transparent, easy, and enjoyable for our customers.</p>
+          <p>Located at 123 Main Street, Colombo, Sri Lanka, our showroom is open six days a week. Our team of experienced professionals is committed to helping you find your dream car. We stand by our promise of excellent customer service and after-sales support.</p>
+          <p>This website was developed by Sarasi Kodithuwakku. We continuously strive to improve your browsing experience and keep our listings updated with the latest vehicles available in the market.</p>
+          <p>We look forward to welcoming you to Dream Cars and making your car buying journey a memorable one.</p>
+        </div>
       </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="page-section">
       <div class="content-container contact-container">
         <h3 class="section-title">Contact Us</h3>
         <div class="contact-flex">
-          <div class="contact-form-container">
-            <form id="contact-form">
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" required/>
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" required/>
-              </div>
-              <div class="form-group">
-                <label for="phone">Phone</label>
-                <input type="tel" id="phone"/>
-              </div>
-              <div class="form-group">
-                <label for="subject">Subject</label>
-                <input type="text" id="subject"/>
-              </div>
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" required></textarea>
-              </div>
-              <button type="submit" class="btn">Submit</button>
-            </form>
-          </div>
           <div class="contact-info">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.3431616788223!2d79.88293921477035!3d6.849767695048682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25a59c0378037%3A0xc3f58a7f053229b9!2s123%20Main%20St%2C%20Colombo%2C%20Sri%20Lanka!5e0!3m2!1sen!2sus!4v1615469857640!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.3431616788223!2d79.88293921477035!3d6.849767695048682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25a59c0378037%3A0xc3f58a7f053229b9!2s123%20Main%20St%2C%20Colombo%2C%20Sri%20Lanka!5e0!3m2!1sen!2sus!4v1615469857640!5m2!1sen!2sus" loading="lazy"></iframe>
             <p><strong><i class="fas fa-map-marker-alt"></i> Address:</strong> 123 Main Street, Colombo, Sri Lanka</p>
             <p><strong><i class="fas fa-phone"></i> Phone:</strong> +94 77 123 4567</p>
             <p><strong><i class="fas fa-envelope"></i> Email:</strong> info@dreamcars.lk</p>
             <p><strong><i class="fas fa-clock"></i> Hours:</strong> Mon-Sat, 9 AM - 6 PM</p>
           </div>
+
+          <div class="contact-form-container">
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="e0822d42-3ad4-49c5-b797-144a8e8891e2">
+              <input type="hidden" name="redirect" value="thank-you.html">
+              <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" name="name" id="name" required placeholder="Your full name" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" name="email" id="email" required placeholder="your.email@example.com" />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" name="phone" id="phone" pattern="[0-9]{10}" title="Enter a 10-digit phone number (e.g., 0712345678)" placeholder="0712345678" />
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" name="subject" id="subject" placeholder="How can we help?" />
+              </div>
+              <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea name="message" id="message" required placeholder="Tell us more about your inquiry..."></textarea>
+              </div>
+              <button type="submit" class="btn">Submit</button>
+            </form>
+            <div id="form-message" class="form-message"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Test Drive Section -->
+    <section id="test-drive-section" class="page-section">
+        <div class="content-container contact-container">
+            <h3 class="section-title">Schedule a Test Drive</h3>
+            <div class="contact-form-container">
+                <form id="test-drive-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="e0822d42-3ad4-49c5-b797-144a8e8891e2">
+                    <input type="hidden" name="redirect" value="#thank-you-section">
+                    <div class="form-group">
+                        <label for="td-name">Name *</label>
+                        <input type="text" name="name" id="td-name" required placeholder="Your full name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="td-email">Email *</label>
+                        <input type="email" name="email" id="td-email" required placeholder="your.email@example.com" />
+                    </div>
+                    <div class="form-group">
+                        <label for="td-phone">Phone *</label>
+                        <input type="tel" name="phone" id="td-phone" pattern="[0-9]{10}" title="Enter a 10-digit phone number (e.g., 0712345678)" required placeholder="0712345678" />
+                    </div>
+                    <div class="form-group">
+                        <label for="td-area">Area *</label>
+                        <input type="text" name="area" id="td-area" required placeholder="Your location" />
+                    </div>
+                    <div class="form-group">
+                        <label for="td-date">Preferred Date *</label>
+                        <input type="date" name="date" id="td-date" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="td-time">Preferred Time *</label>
+                        <input type="time" name="time" id="td-time" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="td-message">Additional Information</label>
+                        <textarea name="message" id="td-message" placeholder="Any specific requirements or preferences?"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Schedule Test Drive</button>
+                </form>
+                <div id="test-drive-message" class="form-message"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Thank You Section -->
+    <section id="thank-you-section" class="page-section">
+        <div class="content-container" style="text-align: center; padding-top: 5rem;">
+            <h3 class="section-title">Thank You!</h3>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem;">Your request has been submitted successfully. We will contact you shortly to confirm the details.</p>
+            <a href="#home" class="btn">Back to Home</a>
+        </div>
+    </section>
+
+    <!-- Privacy Policy Section -->
+    <section id="privacy" class="page-section">
+      <div class="content-container">
+        <h3 class="section-title">Privacy Policy</h3>
+        <div style="max-width: 900px; margin: 0 auto;">
+          <p>At Dream Cars, we respect your privacy and are committed to protecting your personal data.</p>
+          <h4 style="color: var(--accent-blue); margin-top: 1.5rem;">1. Information We Collect</h4>
+          <p>We may collect your name, email, phone number, and any details you provide when contacting us or booking services.</p>
+          <h4 style="color: var(--accent-blue); margin-top: 1.5rem;">2. How We Use Information</h4>
+          <p>Your information is used for communication, processing inquiries, and improving our services.</p>
+          <h4 style="color: var(--accent-blue); margin-top: 1.5rem;">3. Data Security</h4>
+          <p>We implement appropriate security measures to protect your personal information from unauthorized access.</p>
+          <h4 style="color: var(--accent-blue); margin-top: 1.5rem;">4. Cookies</h4>
+          <p>Our website may use cookies to improve user experience. You can manage cookie settings via your browser.</p>
+          <h4 style="color: var(--accent-blue); margin-top: 1.5rem;">5. Third-Party Services</h4>
+          <p>We do not share your data with third parties except for service providers necessary to run our business.</p>
+          <p style="margin-top: 1.5rem;">For any questions regarding our privacy policy, please contact us at <strong>info@dreamcars.lk</strong>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Terms & Conditions Section -->
+    <section id="terms" class="page-section">
+      <div class="content-container">
+        <h3 class="section-title">Terms & Conditions</h3>
+        <div style="max-width: 900px; margin: 0 auto;">
+          <p>By using our website, you agree to the following terms and conditions:</p>
+          <h4 style="color: var(--accent-blue); margin-top: 1.5rem;">1. Website Usage</h4>
+          <p>The content on this website is for informational purposes only. Availability of products may change without notice.</p>
+          <h4 style="color: var(--accent-blue); margin-top: 1.5rem;">2. User Responsibilities</h4>
+          <p>Users must not misuse the website, attempt unauthorized access, or disrupt services in any way.</p>
+          <h4 style="color: var(--accent-blue); margin-top: 1.5rem;">3. Intellectual Property</h4>
+          <p>All content, images, and information on this website are owned by Dream Cars unless otherwise stated. Copying or redistribution is prohibited.</p>
+          <h4 style="color: var(--accent-blue); margin-top: 1.5rem;">4. Limitation of Liability</h4>
+          <p>Dream Cars is not liable for any damages resulting from use of the website or reliance on information provided.</p>
+          <h4 style="color: var(--accent-blue); margin-top: 1.5rem;">5. Changes to Terms</h4>
+          <p>We may update these terms and conditions at any time. Continued use of the website indicates acceptance of the changes.</p>
+          <p style="margin-top: 1.5rem;">If you have any questions, please contact us at <strong>info@dreamcars.lk</strong>.</p>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2024 Dream Cars. All Rights Reserved.</p>
-    <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    <p>&copy; 2024 Dream Cars. All Rights Reserved.</p>
+    <p>
+      <a href="#privacy">Privacy Policy</a> |
+      <a href="#terms">Terms & Conditions</a>
+    </p>
   </footer>
 
   <script src="script.js"></script>
